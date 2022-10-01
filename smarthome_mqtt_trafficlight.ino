@@ -134,7 +134,7 @@ void reconnect() {
     } else {
       Serial.println("Connected");
       client.publish("Traffic", "I'm alive");
-      client.subscribe("Traffic");
+      client.subscribe("/home/test/mqttpixels");
     }
   }
 }
@@ -146,13 +146,6 @@ void loop() {
   if (!client.connected()) {
     reconnect();
   }
-
-  /*if (timeStatus() != timeNotSet) {
-    if (now() != prevDisplay) { //update the display only if time has changed
-      prevDisplay = now();
-      digitalClockDisplay();  
-    }
-  }*/
 
   strip.clear();
   client.loop();
