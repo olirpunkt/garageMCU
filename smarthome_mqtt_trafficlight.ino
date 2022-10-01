@@ -57,14 +57,14 @@ void wipeRing() {
   if ((rCol < 0) || (rCol > 255) || rCol == NULL) {
     rCol = 0;
   }
-  if ((gCol < 0) || (gCol > 255)) {
+  if ((gCol < 0) || (gCol > 255) || gCol == NULL) {
     gCol = 140;
   }
-  if ((bCol < 0) || (bCol > 255)) {
+  if ((bCol < 0) || (bCol > 255) || bCol == NULL) {
     bCol = 0;
   }
-  if ((brightness < 0) || (brightness > 255)) {
-    brightness = 100;
+  if ((brightness < 0) || (brightness > 255) || brightness == NULL) {
+    brightness = 20;
   }
 
 
