@@ -54,7 +54,7 @@ void wipeRing() {
   brightness = doc["bright"]; 
 
   //make sure the values are valid
-  if ((rCol < 0) || (rCol > 255)) {
+  if ((rCol < 0) || (rCol > 255) || rCol == NULL) {
     rCol = 0;
   }
   if ((gCol < 0) || (gCol > 255)) {
