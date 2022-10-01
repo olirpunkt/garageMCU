@@ -44,9 +44,7 @@ void callback(char * topic, byte* payload, unsigned int length) {
   deserializeJson(doc, payload, length);
 }
 
-
 void wipeRing() {
-
   //read RGB values from MQTT document
   rCol = doc["R"];
   gCol = doc["G"];
@@ -66,8 +64,6 @@ void wipeRing() {
   if ((brightness < 0) || (brightness > 255) || brightness == NULL) {
     brightness = 20;
   }
-
-
   //run through ring and set the pixels to desired color
   for (int i = 0; i < 12; i++) {
     strip.setPixelColor(i, strip.Color(rCol, gCol, bCol));
@@ -138,8 +134,6 @@ void reconnect() {
     }
   }
 }
-
-time_t prevDisplay = 0; // when the digital clock was displayed
 
 void loop() {
   
